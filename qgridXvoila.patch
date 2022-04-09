@@ -1,0 +1,10 @@
+--- voila_setup.macro.html.j2.orig	2022-04-09 09:36:32.515586100 +0000
++++ voila_setup.macro.html.j2	2022-04-09 09:37:11.465586100 +0000
+@@ -2,6 +2,7 @@
+ {%- macro voila_setup_nbextensions(base_url, nbextensions) -%}
+ <script>
+   requirejs.config({ baseUrl: '{{base_url}}voila/', waitSeconds: 30});
++  define("base/js/dialog", [], () => {})
+   window.voila_js_url = "{{ static_url('voila.js')}}";
+   requirejs(["{{ static_url('main.js') }}"]);
+ 
