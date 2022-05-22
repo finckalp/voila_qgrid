@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+  voila:
+    image: finckalp/voila
+    build: .
+    container_name: voila
+    volumes:
+      - ./examples/:/notebooks/
+    ports:
+      - 8866:8866
