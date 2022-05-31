@@ -22,3 +22,15 @@ require to deep dive into qgrid/voila js scripts.
 This image offer an plug-and-play solution, where it downloads the correct version of voila and qgrid, then applies
 the patch detailed by @jeffyjefflabs (https://github.com/voila-dashboards/voila/issues/72#issuecomment-696356918) and
 start the voila server.
+
+## Usage
+Example notebooks and a docker-compose file are available to speed up deployment process.
+
+```docker-compose up -d``` to start the example
+
+You can adjust the directory from which notebooks are read from by adjusting the docker-compose.yml
+
+## Warning
+For deployment in production, it is recommended by voila to use a reverse proxy to secure up voila (and eventually
+setup HTTPS). A good option would be NGINX through 
+[Nginx Proxy Manager](https://github.com/NginxProxyManager/nginx-proxy-manager) and you can then user docker networks.
